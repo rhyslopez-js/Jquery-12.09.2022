@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var num1;
+      var num2;
+      var result;
+
+      // Addition
+      $("#addition-form").submit(function(e) {
+        e.preventDefault();
+        num1 = parseInt($("#addition-num1").val());
+        num2 = parseInt($("#addition-num2").val());
+        result = num1 + num2;
+        $("#addition-result").text(result);
+      });
+
+      // Subtraction
+      $("#subtraction-form").submit(function(e) {
+        e.preventDefault();
+        num1 = parseInt($("#subtraction-num1").val());
+        num2 = parseInt($("#subtraction-num2").val());
+        result = num1 - num2;
+        $("#subtraction-result").text(result);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <h2>Addition</h2>
+  <form id="addition-form">
+    <input type="number" id="addition-num1" value="0">
+    +
+    <input type="number" id="addition-num2" value="0">
+    =
+    <span id="addition-result">0</span>
+    <button type="submit">Calculate</button>
+  </form>
+
+  <h2>Subtraction</h2>
+  <form id="subtraction-form">
+    <input type="number" id="subtraction-num1" value="0">
+    -
+    <input type="number" id="subtraction-num2" value="0">
+    =
+    <span id="subtraction-result">0</span>
+    <button type="submit">Calculate</button>
+  </form>
+</body>
+</html>
